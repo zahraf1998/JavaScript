@@ -1,0 +1,120 @@
+@font-face {
+    font-family: 'DigitalNumbers';
+    src: url(./DigitalNumbers.woff);
+}
+
+@font-face {
+    font-family: 'RobotoCondensed';
+    src: url(./RobotoCondensed.woff);
+}
+
+body {
+    margin: 0;
+    font-size: 16px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffd5c2;
+}
+
+#app{
+    height: 70%;
+    min-height: 280px;
+    width: 80%;
+    max-width: 580px;
+    border-bottom: 4px solid #8b8b8b;
+    border-right: 3px solid #a7a7a7;
+    padding: 15px;
+    background-color: #cacaca;
+    border-radius: 10px;
+    box-shadow: 2px 5px 15px 5px #464646;
+}
+
+#result {
+    text-align: right;
+    font-size: 3.5em;
+    padding: 0 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 28%;
+    width: 100%;
+    background-color: #EEE;
+    color: #444;
+    font-family: 'DigitalNumbers';
+    overflow: hidden;
+    border-radius: 5px;
+    border-bottom: 3px solid #a3a3a3;
+    border-right: 3px solid #a3a3a3;
+    border-top: 3px solid #686767;
+    border-left: 3px solid #747474;
+}
+
+#keypad {
+    height: 72% ;
+    width: 100%;
+    color: #DDD;
+    font-family: 'RobotoCondensed';
+    display: flex;
+    text-align: center;
+}
+
+#nums {
+    height: 100%;
+    width: 54%;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+}
+
+.key {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #19676E;
+    border-radius: 10px;
+    box-shadow: 1px 2px 1px #535353;
+    border: 1px solid #4e4e4e;
+    font-size: 1.5em;
+}
+
+.key:active {
+    box-shadow: none;
+    transition: all 0.1s;
+}
+#nums .key {
+    background-color: #858585;
+    margin: 3%;
+}
+
+#nums .key:nth-child(odd) {
+    background-color: #686868;
+}
+
+#nums .key.equal {
+    background-color: #da6b65;
+}
+
+#ops {
+    height: 100%;
+    width: 46%;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+}
+
+#ops .key {
+    background-color: #D34E47;
+    margin: 2.5%;
+}
+
+#ops .key.clear,
+#ops .key.clear-all {
+    background-color: #c00b02;
+}
+
+#ops .key.plus {
+    grid-column: 1;
+    grid-row: 3 / 5;
+}
